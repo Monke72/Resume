@@ -1,0 +1,15 @@
+.about {
+  padding-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  &__text {
+    font-size: 32px;
+  }
+
+  &__text-accent {
+    color: var(--color-accent);
+  }
+}
+.about__br {
+  padding-block: 10px;
+}

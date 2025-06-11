@@ -1,0 +1,38 @@
+.header {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__language-button {
+    padding: 20px;
+    font-size: 20px;
+    color: #b8b8ff;
+  }
+  &__icon {
+  }
+
+  &__icon-image {
+    max-width: 50px;
+  }
+
+  &__nav {
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__nav-item {
+  }
+
+  &__nav-link {
+    color: var(--color-light);
+    transition: all 0.5s;
+
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+}
