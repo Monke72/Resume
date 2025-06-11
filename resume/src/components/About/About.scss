@@ -3,11 +3,12 @@
   display: flex;
   justify-content: space-between;
   &__text {
-    font-size: 32px;
+    font-size: var(--font-size-xxl);
   }
 
   &__text-accent {
     color: var(--color-accent);
+    font-weight: 500;
   }
 }
 .about__br {

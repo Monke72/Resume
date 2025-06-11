@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ReactIcon from "@assets/reactIcon.png";
+import "./ScrollTrigger.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +13,7 @@ export default function ScrollTrigerT() {
         trigger: "#pin-windmill",
         start: "30% 30%",
         endTrigger: "#pin-windmill-wrap",
-        end: "bottom 50%",
+        end: "bottom 0",
         scrub: 2,
         pin: true,
       },
@@ -33,7 +34,7 @@ export default function ScrollTrigerT() {
     <div
       id="pin-windmill-wrap"
       style={{
-        height: "100vh",
+        height: "123vh",
         textAlign: "center",
         position: "relative",
         top: "0",
@@ -47,7 +48,7 @@ export default function ScrollTrigerT() {
           id="pin-windmill-svg"
           src={ReactIcon}
           alt=""
-          style={{ display: "block", maxWidth: "300px", height: "auto" }}
+          style={{ display: "block", height: "auto" }}
         />
       </div>
     </div>

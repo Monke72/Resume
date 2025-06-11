@@ -15,7 +15,7 @@ const Header = () => {
   useEffect(() => {
     if (headerTextRef.current) {
       gsap.to(headerTextRef.current, {
-        color: "#9381ff", // желаемый цвет
+        color: "#669bbc", // желаемый цвет
         duration: 1.5,
         repeat: -1,
         yoyo: true,

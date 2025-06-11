@@ -1,0 +1,73 @@
+.job {
+  padding-top: 120px;
+  &__title {
+    font-size: var(--font-size-xxl);
+    padding-bottom: 40px;
+  }
+  &__accent {
+    color: var(--color-accent);
+  }
+}
+
+.info {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 30px 40px;
+    box-shadow: -3px -4px 13px -5px rgb(102, 155, 188);
+    border-radius: 50px;
+  }
+
+  &__date {
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 3px dashed var(--color-accent);
+    display: inline;
+  }
+
+  &__job {
+    padding-top: 40px;
+    font-size: 23px;
+    line-height: 1.1;
+  }
+
+  &__name {
+    font-size: 18px;
+    color: var(--color-accent);
+    padding-bottom: 10px;
+  }
+
+  &__text {
+    padding-bottom: 30px;
+  }
+
+  &__stack-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__stack-item {
+    padding: 14px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.13),
+      inset 20px 6px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.13),
+      inset 20px 6px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.13),
+      inset 20px 6px 4px rgba(0, 0, 0, 0.3);
+  }
+  &__stack-image {
+    width: 30px;
+    transition: transform 1.5s ease; // плавный переход
+
+    @include hover {
+      transform: scale(1.1) rotate(360deg); // вращение и масштаб
+    }
+  }
+}
