@@ -3,7 +3,7 @@ import { AnimatedText } from "../AnimatedText/AnimatedText";
 import "./About.scss";
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about__text">
         <AnimatedText>
           <span>{"<strong>"}</span>

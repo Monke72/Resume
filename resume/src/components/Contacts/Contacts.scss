@@ -1,0 +1,44 @@
+.contacts {
+  padding-block: 80px;
+  &__accent {
+    color: var(--color-accent);
+  }
+  &__wrapper {
+    padding: 50px 40px;
+    border: 5px dashed var(--color-accent);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 25px;
+    padding-bottom: 35px;
+  }
+}
+
+.icons {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__item {
+    padding: 14px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.5s;
+    @include hover {
+      background-color: var(--color-accent);
+      .icons__image {
+        transform: scale(1.11);
+      }
+    }
+  }
+  &__image {
+    transition: all 1s;
+    width: 30px;
+  }
+}

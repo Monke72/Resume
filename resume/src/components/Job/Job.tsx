@@ -15,7 +15,7 @@ const Job = () => {
         {
           opacity: 0,
           x: -150,
-          scale: 0.9,
+          scale: 0.95,
         },
         {
           opacity: 1,
@@ -36,7 +36,7 @@ const Job = () => {
   }, []);
 
   return (
-    <section className="job container">
+    <section className="job container" id="jobs">
       <h3 className="job__title">
         <span className="job__accent">Job </span>Experience
       </h3>
@@ -68,6 +68,7 @@ const Job = () => {
               <div className="info__date">{item.date}</div>
               <h3 className="info__job">{item.job}</h3>
               <h5 className="info__name">{item.name}</h5>
+
               <p className="info__text">{item.text}</p>
               <ul className="info__stack-list">
                 {item.stack.map((el, j) => (

@@ -21,6 +21,11 @@
     padding: 30px 40px;
     box-shadow: -3px -4px 13px -5px rgb(102, 155, 188);
     border-radius: 50px;
+    transition: 1s;
+    @include hover {
+      box-shadow: 0 0 0 rgba(102, 155, 188, 0),
+        inset 0 0 15px rgba(102, 155, 188, 0.7);
+    }
   }
 
   &__date {
@@ -34,6 +39,7 @@
     padding-top: 40px;
     font-size: 23px;
     line-height: 1.1;
+    transition: transform 1.5s ease;
   }
 
   &__name {

@@ -7,13 +7,15 @@ import htmlIcon from "@assets/html.png";
 import cssIcon from "@assets/css.png";
 import viteIcon from "@assets/vite.svg";
 import figmaIcon from "@assets/Figma.png";
-export const freelanceStack = [
+import { IIcons } from "src/types/IconTypes";
+
+export const freelanceStack: IIcons[] = [
   { src: htmlIcon, alt: "HTML" },
   { src: cssIcon, alt: "CSS" },
   { src: jsIcon, alt: "JavaScript" },
   { src: figmaIcon, alt: "Figma" },
 ];
-export const AbomStack = [
+export const AbomStack: IIcons[] = [
   ...freelanceStack,
   { src: tsIcon, alt: "TypeScript" },
   { src: reactIcon, alt: "React" },

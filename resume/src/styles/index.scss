@@ -8,6 +8,7 @@ body {
   background-color: var(--color-dark);
   color: var(--color-light);
   font-size: var(--font-size-l);
+  scroll-behavior: smooth;
 }
 .container {
   max-width: var(--container-size);

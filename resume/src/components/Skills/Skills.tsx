@@ -24,7 +24,7 @@ const Skills = () => {
     };
   }, []);
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <div className="hard__skills">
         <h3 className="skills__title">
           <span className="skills__title-accent">Hard </span>
