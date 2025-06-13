@@ -2,7 +2,21 @@ import "./Skills.scss";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslation } from "react-i18next";
 const Skills = () => {
+  const { t } = useTranslation();
+  const translateSentences = [
+    "command",
+    "deadlines",
+    "clearCode",
+    "godThoughts",
+    "details",
+    "calm",
+    "workTime",
+    "disagreements",
+    "help",
+    "studyingTech",
+  ];
   useEffect(() => {
     // Анимация для каждого li
     gsap.utils.toArray<HTMLElement>(".skills__item").forEach((el) =>
@@ -27,8 +41,8 @@ const Skills = () => {
     <div className="skills" id="skills">
       <div className="hard__skills">
         <h3 className="skills__title">
-          <span className="skills__title-accent">Hard </span>
-          skills
+          <span className="skills__title-accent">{t("hard")} </span>
+          {t("skills")}
         </h3>
         <ul className="skills__list">
           <li className="skills__item">HTML(HTML5) , JSX , TSX</li>
@@ -51,24 +65,13 @@ const Skills = () => {
       </div>
       <div className="soft__skills">
         <h3 className="skills__title">
-          <span className="skills__title-accent">Soft </span>
-          skills
+          <span className="skills__title-accent">{t("soft")} </span>
+          {t("skills")}
         </h3>
         <ul className="skills__list">
-          {[
-            "Эффективно взаимодействую с командой, включая разработчиков, дизайнеров и менеджеров.",
-            "Всегда соблюдаю сроки и несу ответственность за качество выполненной работы.",
-            "Пишу чистый, понятный и поддерживаемый код, соблюдая стиль проекта.",
-            "Умею точно и ясно доносить свои мысли, быстро формулирую вопросы и предложения.",
-            "Тщательно вникаю в требования, внимательно отношусь к деталям технического задания.",
-            "Спокойно принимаю конструктивную критику и использую её для профессионального роста.",
-            "Умею грамотно организовать своё рабочее время и соблюдать приоритеты.",
-            "Разрешаю рабочие разногласия без конфликта, поддерживаю здоровую атмосферу.",
-            "Помогаю младшим специалистам, делюсь опытом и помогаю в обучении.",
-            "Постоянно изучаю новые технологии и подходы, чтобы расти как специалист.",
-          ].map((text, index) => (
-            <li className="skills__item" key={index}>
-              {text}
+          {translateSentences.map((el, i) => (
+            <li className="skills__item" key={i}>
+              {t(el)}
             </li>
           ))}
         </ul>

@@ -1,8 +1,6 @@
 .contacts {
   padding-block: 80px;
-  &__accent {
-    color: var(--color-accent);
-  }
+
   &__wrapper {
     padding: 50px 40px;
     border: 5px dashed var(--color-accent);
@@ -14,6 +12,8 @@
   &__title {
     font-size: 25px;
     padding-bottom: 35px;
+    color: var(--color-accent);
+    max-width: 650px;
   }
 }
 

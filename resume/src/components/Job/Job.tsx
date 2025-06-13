@@ -3,9 +3,12 @@ import { useRef, useEffect } from "react";
 import { AbomStack } from "@assets/stackList/stackList";
 import { freelanceStack } from "@assets/stackList/stackList";
 import gsap from "gsap";
+import { useTranslation } from "react-i18next";
 
 const Job = () => {
   const blocksRef = useRef<HTMLLIElement[]>([]);
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   useEffect(() => {
     blocksRef.current.forEach((el, i) => {
@@ -37,24 +40,31 @@ const Job = () => {
 
   return (
     <section className="job container" id="jobs">
-      <h3 className="job__title">
-        <span className="job__accent">Job </span>Experience
-      </h3>
+      {currentLanguage === "ru" && (
+        <h3 className="job__title">
+          <span className="job__accent">Опыт </span>Работы
+        </h3>
+      )}
+      {currentLanguage === "en" && (
+        <h3 className="job__title">
+          <span className="job__accent">Job </span>Experience
+        </h3>
+      )}
       <div className="job__info">
         <ul className="info__list">
           {[
             {
-              date: "Juniary 2023 - Present",
+              date: "abomDate",
               job: "Abom",
               name: "Frontend Developer",
-              text: "I worked in a team with a senior developer on an internal web application for managing company employees.",
+              text: "abomExperience",
               stack: AbomStack,
             },
             {
-              date: "December 2022 - Juniary 2023",
+              date: "freelanceDate",
               job: "Freelance",
               name: "Frontend/Web Developer",
-              text: "Worked on SPA applications: admin panels, online stores, landing pages.",
+              text: "freelanceExperience",
               stack: freelanceStack,
             },
           ].map((item, i) => (
@@ -65,15 +75,16 @@ const Job = () => {
                 blocksRef.current[i] = el!;
               }}
             >
-              <div className="info__date">{item.date}</div>
+              <div className="info__date">{t(item.date)}</div>
               <h3 className="info__job">{item.job}</h3>
               <h5 className="info__name">{item.name}</h5>
 
-              <p className="info__text">{item.text}</p>
+              <p className="info__text">{t(item.text)}</p>
               <ul className="info__stack-list">
                 {item.stack.map((el, j) => (
                   <li className="info__stack-item" key={j}>
                     <img
+                      title={el.alt}
                       className="info__stack-image"
                       src={el.src}
                       alt={el.alt}

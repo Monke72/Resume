@@ -9,6 +9,9 @@ type AnimatedTextProps = {
 export const AnimatedText = ({ children }: AnimatedTextProps) => {
   const refs = useRef<HTMLElement[]>([]);
 
+  // Сброс ссылок перед новым рендером
+  refs.current = [];
+
   useEffect(() => {
     gsap.fromTo(
       refs.current,
@@ -17,13 +20,11 @@ export const AnimatedText = ({ children }: AnimatedTextProps) => {
         opacity: 1,
         y: 0,
         duration: 0.5,
-        stagger: 0.1,
+        stagger: 0.05,
         ease: "power3.out",
       }
     );
   }, []);
-
-  refs.current = []; // сбросить перед рендером
 
   return (
     <>
@@ -31,6 +32,7 @@ export const AnimatedText = ({ children }: AnimatedTextProps) => {
         if (typeof child === "string") {
           return child.split("").map((char, j) => {
             if (char === "\n") {
+              // Перенос строки
               return <br key={`${i}-${j}`} />;
             }
 

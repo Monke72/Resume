@@ -1,20 +1,14 @@
 import { contactsArray } from "@assets/contactList/contactList";
 import "./Contacts.scss";
+import { useTranslation } from "react-i18next";
 const Contacts = () => {
+  const { t } = useTranslation();
   return (
     <section className="contacts container" id="contact">
       <div className="contacts__wrapper">
         <div className="contacts__info">
-          <h1 className="contacts__title">
-            <span className="contacts__accent">
-              Do you feel like asking me something interesting?{" "}
-            </span>{" "}
-            <br /> I’m here and ready to chat.
-          </h1>
-          <p className="contacts__text">
-            Write to me and I will try to respond at any time convenient for
-            you.
-          </p>
+          <h1 className="contacts__title">{t("askMe")}</h1>
+          <p className="contacts__text">{t("writeMe")}</p>
         </div>
         <div className="contacts__icons">
           <ul className="icons__list">

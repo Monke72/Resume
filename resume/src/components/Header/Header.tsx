@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const toggleLanguage = () => {
     const newLang = i18n.language === "en" ? "ru" : "en";
     i18n.changeLanguage(newLang);
@@ -47,22 +47,22 @@ const Header = () => {
           <ul className="header__nav-list">
             <li className="header__nav-item">
               <a href="#" className="header__nav-link">
-                About
+                {t("About")}
               </a>
             </li>
             <li className="header__nav-item">
               <a href="#skills" className="header__nav-link">
-                Skills
+                {t("Skills")}
               </a>
             </li>
             <li className="header__nav-item">
               <a href="#jobs" className="header__nav-link">
-                Job experience
+                {t("Job experience")}
               </a>
             </li>
             <li className="header__nav-item">
               <a href="#contact" className="header__nav-link">
-                Contacts
+                {t("Contacts")}
               </a>
             </li>
           </ul>
@@ -72,7 +72,7 @@ const Header = () => {
           className="header__language-button"
           onClick={toggleLanguage}
         >
-          {i18n.language === "en" ? "RU" : "EN"}
+          {i18n.language === "en" ? "EN" : "RU"}
         </button>
       </div>
     </section>
