@@ -6,4 +6,10 @@
   @include tablet {
     padding-top: 170px;
   }
+  @include mobile {
+    padding-top: 150px;
+  }
+  @include mobile-s {
+    padding-top: 120px;
+  }
 }

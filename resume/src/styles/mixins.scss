@@ -1,29 +1,14 @@
 $tablet-above: 1200px;
 $tablet: 1199px;
 
-$mobile-above: 1000px;
-$mobile: 999px;
+$mobile-above: 900px;
+$mobile: 899px;
 
-$mobile-s-above: 701px;
-$mobile-s: 700px;
-
-$mobile-xs-above: 571px;
-$mobile-xs: 570px;
+$mobile-s-above: 501px;
+$mobile-s: 500px;
 
 @mixin mobile-touch {
   @media (pointer: none), (pointer: coarse) {
-    @content;
-  }
-}
-
-@mixin mobile-xs-above {
-  @media (min-width: $mobile-xs-above) {
-    @content;
-  }
-}
-
-@mixin mobile-xs {
-  @media (max-width: $mobile-xs) {
     @content;
   }
 }

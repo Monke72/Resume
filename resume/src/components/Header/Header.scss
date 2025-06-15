@@ -17,15 +17,31 @@
     padding: 20px;
     font-size: 20px;
     color: #b8b8ff;
+    @include mobile {
+      padding: 10px;
+    }
+    @include mobile-s {
+      font-size: 16px;
+      padding: 5px;
+    }
   }
 
   &__icon-image {
     max-width: 50px;
+    @include mobile-s {
+      max-width: clamp(2.188rem, 10vw, 3.125rem);
+    }
   }
 
   &__nav-list {
     display: flex;
     gap: 40px;
+    @include mobile {
+      gap: clamp(1.25rem, -0.313rem + 5vw, 2.5rem);
+    }
+    @include mobile-s {
+      gap: clamp(0.5rem, -0.521rem + 4.67vw, 0.938rem);
+    }
   }
 
   &__nav-link {

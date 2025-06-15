@@ -43,11 +43,13 @@ body.overlay {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: var(--color-dark);
   z-index: 1111;
+  left: 0;
+  top: 0;
   &__content {
     display: flex;
     justify-content: center;
@@ -62,6 +64,10 @@ body.overlay {
     width: 100%;
     padding: 40px 40px 40px 0px;
     top: -30px;
+    @include mobile-s {
+      left: -80px;
+      top: -80px;
+    }
   }
 
   &__item {
@@ -72,6 +78,9 @@ body.overlay {
 
   &__image {
     width: 100px;
+    @include tablet {
+      width: 80px;
+    }
   }
 }
 .overlay__item {

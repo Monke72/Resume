@@ -11,7 +11,7 @@ export default function ScrollTrigerT() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#pin-windmill",
-        start: "30% 30%",
+        start: "20% 20%",
         endTrigger: "#pin-windmill-wrap",
         end: "bottom 0",
         scrub: 2,
@@ -34,7 +34,7 @@ export default function ScrollTrigerT() {
     <div
       id="pin-windmill-wrap"
       style={{
-        height: "120vh",
+        height: "100vh",
         textAlign: "center",
         position: "relative",
         top: "0",

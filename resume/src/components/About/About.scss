@@ -6,6 +6,9 @@
     justify-content: center;
     padding-left: clamp(1.688rem, -15.75rem + 31vw, 7.5rem);
   }
+  @include mobile {
+    padding-left: unset;
+  }
   &__text {
     font-size: var(--font-size-xxl);
   }

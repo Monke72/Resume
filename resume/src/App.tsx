@@ -9,6 +9,10 @@ function App() {
   const [overlay, setOverlay] = useState<boolean>(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (overlay) {
       document.body.classList.add("overlay");
     } else {

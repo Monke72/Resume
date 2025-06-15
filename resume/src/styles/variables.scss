@@ -14,4 +14,12 @@
     --font-size-l: 14px;
     --font-size-xxl: 28px;
   }
+  @include mobile {
+    --container-size: 700px;
+  }
+  @include mobile-s {
+    --container-size: 400px;
+    --font-size-l: 12px;
+    --font-size-xxl: 20px;
+  }
 }
