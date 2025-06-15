@@ -1,8 +1,0 @@
-#pin-windmill-svg {
-  max-width: var(--trigger-size);
-}
-#pin-windmill-wrap {
-  @include mobile {
-    display: none;
-  }
-}
