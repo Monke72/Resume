@@ -7,4 +7,11 @@
   --font-size-xxl: 32px;
   --container-size: 1230px;
   --trigger-size: 300px;
+
+  @include tablet {
+    --trigger-size: 90px;
+    --container-size: 900px;
+    --font-size-l: 14px;
+    --font-size-xxl: 28px;
+  }
 }

@@ -14,6 +14,11 @@
     padding-bottom: 35px;
     color: var(--color-accent);
     max-width: 650px;
+    @include tablet {
+      font-size: 23px;
+      max-width: 500px;
+      padding-bottom: 25px;
+    }
   }
 }
 
@@ -40,5 +45,8 @@
   &__image {
     transition: all 1s;
     width: 30px;
+    @include tablet {
+      width: 25px;
+    }
   }
 }

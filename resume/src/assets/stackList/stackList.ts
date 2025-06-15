@@ -25,3 +25,5 @@ export const AbomStack: IIcons[] = [
 ].filter(
   (el) => el.alt !== "CSS" && el.alt !== "HTML" && el.alt !== "JavaScript"
 );
+
+export const allStack = new Set([...freelanceStack, ...AbomStack]);

@@ -3,4 +3,7 @@
   justify-content: space-between;
   overflow: hidden;
   padding-top: 220px;
+  @include tablet {
+    padding-top: 170px;
+  }
 }

@@ -34,7 +34,7 @@ export default function ScrollTrigerT() {
     <div
       id="pin-windmill-wrap"
       style={{
-        height: "123vh",
+        height: "120vh",
         textAlign: "center",
         position: "relative",
         top: "0",

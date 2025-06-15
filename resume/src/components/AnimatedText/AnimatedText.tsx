@@ -18,6 +18,7 @@ export const AnimatedText = ({ children }: AnimatedTextProps) => {
       { opacity: 0, y: 20 },
       {
         opacity: 1,
+        delay: 2.5,
         y: 0,
         duration: 0.5,
         stagger: 0.05,

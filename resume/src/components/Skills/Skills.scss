@@ -4,6 +4,10 @@
   padding-top: 160px;
   gap: 40px;
   padding-bottom: 20px;
+  @include tablet {
+    gap: 25px;
+    padding-right: 40px;
+  }
   &__title {
     padding-bottom: 30px;
     font-size: var(--font-size-xxl);
@@ -22,6 +26,8 @@
 
   &__item {
     position: relative;
+    z-index: 11;
+    background-color: var(--color-dark);
     width: 100%;
     padding: 20px 40px;
     border-radius: 20px;

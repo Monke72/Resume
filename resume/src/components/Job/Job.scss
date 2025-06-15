@@ -50,6 +50,9 @@
 
   &__text {
     padding-bottom: 30px;
+    @include tablet {
+      padding-bottom: 15px;
+    }
   }
 
   &__stack-list {
@@ -70,10 +73,13 @@
   }
   &__stack-image {
     width: 30px;
-    transition: transform 1.5s ease; // плавный переход
+    transition: transform 1.5s ease;
+    @include tablet {
+      width: 25px;
+    }
 
     @include hover {
-      transform: scale(1.1) rotate(360deg); // вращение и масштаб
+      transform: scale(1.1) rotate(360deg);
     }
   }
 }
